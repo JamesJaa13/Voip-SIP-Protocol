@@ -1,0 +1,31 @@
+;=============
+; Transport  
+;=============
+
+[transport-udp]
+type=transport
+protocol=udp
+bind=0.0.0.0:5060
+
+;=========================
+; User 1001
+;=========================
+[1001]
+type=endpoint
+transport=transport-udp 
+context=internal
+disallow=all
+auth=1001 
+aors=1001 
+
+[1001]
+type=auth
+auth_type=userpass
+password= 1001
+username= 1001
+
+[1001]
+type=aor
+max_contacts=1
+
+//ในส่วนของ user auth aors username password สามารถตั้งหมายเลขเองได้เช่น 1234 1002 1910 

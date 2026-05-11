@@ -1,0 +1,9 @@
+VoIP 📞
+OS 🏠
+	⁃	ติดตั้ง Linux Ubuntu
+Service 🛠️
+	⁃	ติดตั้ง Asterisk
+	⁃	ส่วนเสริม nettool ต่าง ๆ
+Config ⚙️
+	⁃	Set up Userใน path /etc/asterisk ในไฟล์ pjsip.conf ตั้งค่า username user password การเชื่อมต่อสูงสุดกี่connect การเข้าเชื่อมต่อใน user ,  register , auth , type ของ userเป็นประเภทไหน , transport  , context internal , type user 
+	⁃	Set up การ connect ของ user ต่างๆ เบอร์ห้องประชุม เบอร์รวม internal ของ user ใน path /etc/asterisk/extension.conf 
