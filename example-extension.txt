@@ -1,0 +1,9 @@
+if ! grep -q "[$CONTEXT]" "$EXTCONF"; then
+  echo "[$CONTEXT]" >> "$EXTCONF"
+fi
+
+cat <<EOF >> "$EXTCONF"
+exten => $EXT,1,NoOp(Call to $EXT)
+ same => n,Dial(PJSIP/$EXT,20)
+ same => n,Hangup()
+EOF
